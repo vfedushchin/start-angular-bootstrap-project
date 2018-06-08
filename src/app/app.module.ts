@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppBoostrapModule } from './app-boostrap/app-boostrap.module';
 import { AppComponent } from './app.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {LocalStorageModule} from 'angular-2-local-storage';
@@ -35,7 +34,6 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     AppBoostrapModule,
-    NgbModule.forRoot(),
     LocalStorageModule.withConfig(),
     RouterModule.forRoot(
       appRoutes,
