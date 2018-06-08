@@ -1,23 +1,36 @@
 <app-header-main></app-header-main>
 
 
+<div class="btn-group" dropdown>
+    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+            aria-controls="dropdown-basic">
+        Button dropdown <span class="caret"></span>
+    </button>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+        </li>
+    </ul>
+</div>
+
+
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand">
-                <!--<img src="assets/img/ngx-bootstrap.svg" class="logo">-->
-            </a>
+            <a class="navbar-brand"><img src="assets/img/ngx-bootstrap.svg" class="logo"></a>
             <span class="navbar-brand">Angular + Bootstrap</span>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">
-                Link <span class="sr-only">(current)</span>
-            </a></li>
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Link</a></li>
-            <li class="dropdown" dropdown> <!-- {1} -->
-                <a dropdownToggle role="button"> <!-- {2} -->
-                                                 Dropdown <span class="caret"></span></a>
-                <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+            <li dropdown>
+                <a dropdownToggle class="dropdown-toggle" role="button">Dropdown <span class="caret"></span></a>
+                <ul *dropdownMenu class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
@@ -31,27 +44,30 @@
     </div>
 </nav>
 
-<button type="button" class="btn btn-primary"
-        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-    Button with tooltip
-</button>
+<div class="container">
+
+    <button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Button with tooltip
+    </button>
+
+    <button type="button" class="btn btn-info" (click)="openModal(template)">Create template modal</button>
+
+    <ng-template #template>
+        <div class="modal-header">
+            <h4 class="modal-title pull-left">Modal</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            This is a modal.
+        </div>
+    </ng-template>
+
+</div>
 
 
-<button type="button" class="btn btn-info"
-        (click)="openModal(template)">Create template modal</button>
 
-<ng-template #template>
-    <div class="modal-header">
-        <h4 class="modal-title pull-left">Modal</h4>
-        <button type="button" class="close pull-right"
-                aria-label="Close" (click)="modalRef.hide()">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <div class="modal-body">
-        This is a modal.
-    </div>
-</ng-template>
 
 
 
