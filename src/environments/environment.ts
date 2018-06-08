@@ -9,7 +9,7 @@ export const environment = {
 
   rest_endpoint: {
     register: END_POINT + '/user',
-    login: END_POINT + '/auth/login',
+    login: END_POINT + '/api/user/auth/login',
     logout: END_POINT + '/v1/accessuser/logout',
     //Tokens
     retrieveHistory: END_POINT + '/api/ico/token',
