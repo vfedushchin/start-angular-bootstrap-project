@@ -12,6 +12,6 @@ export const environment = {
     login: END_POINT + '/api/user/auth/login',
     logout: END_POINT + '/v1/accessuser/logout',
     //Tokens
-    retrieveHistory: END_POINT + '/api/ico/token',
+    createToken: END_POINT + '/api/ico/token',
   }
 };

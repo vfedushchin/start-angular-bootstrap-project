@@ -26,6 +26,17 @@ export class DataAccessService {
       .catch(this.handleError);
   }
 
+  public uploadFile(fileToUpload: File, endpoint: string, type: string): Observable<any> {
+    const params = {type: type};
+    const formData: FormData = new FormData();
+    formData.append('mediaData', fileToUpload, fileToUpload.name);
+    formData.append('params', JSON.stringify(params));
+    formData.append( 'type', type);
+    return this.http.post(endpoint, formData, this.getRequestOptions('media'))
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
   public putApiRequest(endpoint: string, request: any): Observable<any> {
 
     return this.http.put(endpoint, request, this.getRequestOptions())

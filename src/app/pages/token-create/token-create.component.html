@@ -51,19 +51,35 @@
 
     <h2>Input data to create token</h2>
     
-    <form>
+    <form [formGroup]="createToken" (submit)="sendCreateTokenReq()">
         <div class="form-group">
             <label >Token Name</label>
-            <input type="email" class="form-control" placeholder="Token Name">
+            <input type="text" class="form-control" placeholder="Token Name" formControlName="name">
         </div>
         <div class="form-group">
             <label >Token Symbol</label>
-            <input type="email" class="form-control" placeholder="Token Symbol">
+            <input type="text" class="form-control" placeholder="Token Symbol" formControlName="symbol">
         </div>
         <div class="form-group">
-            <label >Token Total Supply</label>
-            <input type="email" class="form-control" placeholder="Token Total Supply">
+            <label >Token Description</label>
+            <input type="text" class="form-control" placeholder="Token Description" formControlName="description">
         </div>
+        <div class="form-group">
+            <label >decimals</label>
+            <input type="text" class="form-control" placeholder="Decimals" formControlName="decimals">
+        </div>
+
+        <div class="form-group">
+            <label >total</label>
+            <input type="text" class="form-control" placeholder="Total" formControlName="total">
+        </div>
+
+        <div class="form-group">
+            <a (click)="file.click()">Update</a>
+            <input type="file" accept="image/*" #file (change)="onAvatarChange($event)">
+        </div>
+
+
         <a  href="dashboard.html"  class="btn btn-primary">Create Token</a>
         <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
     </form>
@@ -71,4 +87,5 @@
 </div>
 
 
-<app-footer></app-footer>
+<!--
+<app-footer></app-footer>-->
