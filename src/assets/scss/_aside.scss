@@ -1,0 +1,101 @@
+.aside {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 10000;
+  width: 260px;
+  height: 100%;
+  background-color: $header_bg-color;
+
+  @include media-breakpoint-down(md) {
+    left: -260px;
+  }
+
+  .nav {
+    margin-top: 30px;
+
+    &-link {
+      padding: 10px 30px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #868aa8;
+
+      &.active {
+        color: #716aca;
+
+        .fi {
+          color: #716aca;
+        }
+      }
+
+      .fi {
+        margin-right: 10px;
+        font-size: 20px;
+        color: #525672;
+      }
+    }
+  }
+
+  &-closed {
+    .aside {
+      width: 80px;
+
+      .nav {
+        display: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 260px;
+        left: 0;
+
+        .nav {
+          display: flex;
+        }
+      }
+    }
+
+    .header-menu {
+      width: 80px;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+      & + .header-panel {
+        width: calc(100% - 80px);
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+
+      &-btn {
+        align-items: flex-start;
+      }
+
+      img {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+          display: inline-block;
+        }
+      }
+    }
+
+    .main {
+      margin-left: 95px;
+
+      @include media-breakpoint-down(md) {
+        margin-left: 15px;
+      }
+    }
+
+    .footer {
+      width: calc(100% - 80px);
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
+}

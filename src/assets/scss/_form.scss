@@ -1,0 +1,240 @@
+.input {
+  &-daitoken, &-bitcoin, &-ethereum {
+    padding-right: 30px;
+    border-color: $color-border;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+
+    &:focus {
+      border-color: #716aca;
+      background-color: #F2F2F2;
+      box-shadow: none;
+    }
+  }
+
+  &-daitoken {
+    background-image: url('/./assets/images/daico_logo.png');
+  }
+
+  &-bitcoin {
+    background-image: url('/./assets/images/daico_bitcon.png');
+  }
+
+  &-ethereum {
+    background-image: url('/./assets/images/daico_ethereum.png');
+  }
+}
+
+.form {
+  &-control:not(.input-daitoken):not(.input-bitcoin):not(.input-ethereum) {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #575962;
+    background-color: $light;
+    background-clip: padding-box;
+    border: 1px solid $color-border;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+      border-color: #716aca;
+      box-shadow: none;
+    }
+
+    &[disabled] {
+      border-color: #f4f5f8;
+      color: #6f727d;
+      background-color: #f4f5f8;
+    }
+  }
+}
+
+.form-group {
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+.required:after {
+    content: " *";
+    color: rgba(255,0,0,.81);
+}
+.custom-file {
+    height: calc(3.25rem + 2px);
+    .custom-file-input {
+        height: calc(3.25rem + 2px);
+    }
+    .custom-file-label {
+        height: calc(3.25rem + 2px);
+        padding: .775rem 1.25rem;
+        font-size: 1.15rem;
+        border-color:$color-border;
+        border-radius: 0.3rem;
+
+        &:after {
+            height: calc(calc(3.25rem + 2px) - 1px * 2);
+            padding: .775rem 1.25rem;
+            line-height: 1.5;
+            content: "Browse";
+            background-color: $color-border;
+            border-color:$color-border;
+            border-radius: 0 0.3rem 0.3rem 0;
+        }
+    }
+}
+
+
+.form-add-ico {
+    padding: 30px 0;
+
+    .uploaded-img {
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+
+        p {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        img {
+            max-height: 100px;
+        }
+    }
+
+    .form-section {
+        .collection-item {
+            margin-top: 5px;
+            border: 1px dashed $gray_color-lighter;
+            padding: 30px 15px 15px 15px;
+            position: relative;
+        }
+    }
+
+    .form-group + .form-section {
+        margin-top: 35px;
+    }
+
+    .btn-container {
+        padding: 20px 0;
+        text-align: center;
+        .btn-secondary {
+            &:hover {
+                color: $light;
+                background: $dark;
+            }
+        }
+    }
+
+    .calendar-section {
+        position: relative;
+        i {
+            font-size: 26px;
+            position: absolute;
+            right: 10px;
+            bottom: 18px;
+            color: rgba($dark, .3);
+        }
+    }
+
+}
+
+
+
+
+
+
+.pricing-table{
+    .heading {
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .item {
+        background-color: $light;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+        border-top: 2px solid $primary_color;
+        padding: 30px;
+        overflow: hidden;
+        position: relative;
+        button {
+            font-weight: 600;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+    }
+
+    .col-md-5:not(:last-child) .item {
+        margin-bottom: 30px;
+    }
+
+    .ribbon {
+        width: 160px;
+        height: 32px;
+        font-size: 12px;
+        text-align: center;
+        color: $light;
+        font-weight: bold;
+        box-shadow: 0px 2px 3px rgba($text_color, 0.25);
+        background: $green_color;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -42px;
+        top: 20px;
+        padding-top: 7px;
+    }
+
+    .features {
+        .feature {
+            font-weight: 600;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 18px;
+            padding: 5px;
+        }
+    }
+
+    .price h4 {
+        margin: 15px 0;
+        font-size: 45px;
+        text-align: center;
+        color: $primary_color;
+    }
+
+    .buy-now button {
+        text-align: center;
+        margin: auto;
+        font-weight: 600;
+        padding: 9px 0;
+    }
+}
+
+.dropdown {
+    &-menu {
+        padding: 20px 60px 20px 10px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+    }
+
+    &-item {
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 300px;
+        color: $text_color;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}

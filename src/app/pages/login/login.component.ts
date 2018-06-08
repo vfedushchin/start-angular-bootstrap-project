@@ -38,16 +38,19 @@ export class LoginComponent implements OnInit {
   doLogin() {
     this.loginError = null;
     clearTimeout(this.loginErrorTimer);
-   /* if (!this.loginForm.valid) {
+    if (!this.loginForm.valid) {
       return;
-    }*/
+    }
 
     const email = this.loginForm.value.email;
     const pwd = this.loginForm.value.password;
+
+    /*Todo: need to delete it - data for default login*/
+    //const email="79787268673";
+    //const pwd="124124124";
     const isRemember = this.loginForm.value.isRemember;
 
-    console.log( email );
-    console.log( pwd );
+
 
     this.requestInProgress = true;
     this.authService.signIn(email, pwd, '', isRemember)
@@ -64,11 +67,8 @@ export class LoginComponent implements OnInit {
       .then(() => this.requestInProgress = false);
   }
 
-
   onSuccessfulLogin() {
     this.router.navigate(['token-create']);
   }
-
-
 
 }

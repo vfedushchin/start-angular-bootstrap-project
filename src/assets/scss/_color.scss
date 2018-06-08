@@ -1,0 +1,52 @@
+.bg {
+  &-white {
+    background-color: $light;
+    box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.08);
+  }
+
+  &-yellow {
+    background-color: $yellow_color;
+
+    &:hover {
+      background-color: $yellow_color;
+    }
+  }
+
+  &-dark-blue {
+    background-color: $secondary_color;
+
+    &:hover {
+      background-color: $secondary_color;
+    }
+  }
+}
+
+.text {
+  &-black {
+    color: $text_color-dark;
+  }
+
+  &-yellow {
+    color: $yellow_color;
+  }
+
+  &-dark-blue {
+    color: $secondary_color;
+  }
+
+  &-gray {
+    color: $gray_color;
+
+    &-light {
+      color: $gray_color-light;
+    }
+  }
+
+  &-green {
+    color: $green_color;
+  }
+
+  &-red {
+    color: $red_color;
+  }
+}

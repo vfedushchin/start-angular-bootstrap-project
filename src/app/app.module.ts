@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppBoostrapModule } from './app-boostrap/app-boostrap.module';
 import { AppComponent } from './app.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import {LocalStorageModule} from 'angular-2-local-storage';
@@ -15,6 +16,8 @@ import {DataShareService} from './providers/data-share/data-share.service';
 import { LoginComponent } from './pages/login/login.component';
 import { TokenCreateComponent } from './pages/token-create/token-create.component';
 import {AuthService} from './providers/auth/auth.service';
+import { HeaderMainComponent } from './components/header-main/header-main.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
@@ -25,13 +28,14 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TokenCreateComponent],
+  declarations: [AppComponent, LoginComponent, TokenCreateComponent, HeaderMainComponent, FooterComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppBoostrapModule,
+    NgbModule.forRoot(),
     LocalStorageModule.withConfig(),
     RouterModule.forRoot(
       appRoutes,

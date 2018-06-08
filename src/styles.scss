@@ -1,3 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/dist/css/bootstrap.min.css';
+//@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import "bootstrap.min";
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/utilities/flex";
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/pagination";
+
+
+/*@import "./bootstrap/bootstrap-reboot";
+@import "./bootstrap/bootstrap-grid";
+@import "./bootstrap/bootstrap";
+@import "./open-sans/open-sans";
+@import "./fontawesome/fa-brands";
+@import "./fontawesome/fa-regular";
+@import "./fontawesome/fa-solid";
+@import "./fontawesome/fontawesome";*/
+
+
+
+@import "./variables-site";
+@import "additional-styles";
+
+@import "./header";
+
+@import "./aside";
+@import "./main";
+@import "./footer";
+@import "./color";
+
+@import "./list";
+@import "./table";
+@import "./widget";
+@import "./typography";
+@import "./button";
+@import "./form";
+@import "./nav";
+@import "./modal";
+@import "./mainpage";
+@import "./ico";
+
+//@import "./flaticon";

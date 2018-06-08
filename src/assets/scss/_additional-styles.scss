@@ -1,0 +1,12 @@
+@keyframes present-yourself {
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.animated-appear {
+    transform: translateY(2rem);
+    opacity: 0;
+    animation: present-yourself 1s ease forwards;
+}

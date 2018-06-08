@@ -1,0 +1,329 @@
+.ico-header {
+    display: flex;
+    align-items: center;
+
+    &__logo {
+        margin-right: 30px;
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+        display: flex;
+
+        .title2 {
+            margin-right: 20px;
+        }
+        p {
+            color: $primary_color;
+            margin: 0;
+        }
+    }
+}
+
+.ico-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: $site_bg;
+    border-bottom: 15px solid $light;
+
+    & > li {
+        margin: 0 1px;
+        a {
+            display: inline-block;
+            width: 130px;
+            text-align: center;
+            padding: 10px 5px 2px;
+            background: $light;
+            border-radius: 10px 10px 0 0;
+            transition: all .2s ease-in;
+            &:hover {
+                font-weight: 700;
+                text-decoration: underline;
+                background: rgba($light, .2);
+            }
+        }
+
+    }
+}
+
+
+.ico-content {
+    padding: 30px 50px;
+    font-size: $base-font-size;
+    margin-bottom: 40px;
+
+    .ico-section {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $color-border;
+    }
+}
+
+.project-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: $base-font-size;
+
+    & > li {
+        margin: 0 10px;
+
+        a {
+            padding: 6px 10px;
+            border-radius: $radius;
+            color: $light;
+            background: $primary_color;
+            transition: all .4s ease-in;
+            &:hover {
+                background: #000;
+            }
+        }
+
+        & + li a {background-color: $secondary_color}
+        & + li + li a {background-color: $green_color}
+        & + li + li + li a {background-color: $yellow_color}
+        & + li + li + li + li a {background-color: $orange_color}
+        & + li + li + li + li + li a {background-color: $red_color}
+        & + li + li + li + li + li + li a {background-color: $secondary_color}
+    }
+
+}
+
+.btn-icon {
+    padding: 5px 12px;
+    border-radius: 3px 10px;
+    font-size: 14px;
+    background: $dark;
+    color: $light;
+    i {
+        margin-right: 5px;
+    }
+}
+
+.roadmap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 30px;
+    margin-left: 20px;
+    border-left: 2px dashed rgba($secondary_color, .6);;
+
+    & > li {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: inline-block;
+            content: '';
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: -39px;
+            margin-top: -8px;
+            border-radius: 50%;
+            background: $light;
+            border: 3px solid rgba($secondary_color, .6);;
+        }
+
+        &:after {
+            left: -37px;
+            background: rgba($secondary_color, .6);;
+            border: 5px solid $light;
+        }
+
+        .roadmap-date {
+            flex-basis: 190px;
+            padding: 10px;
+            color: rgba($secondary_color, .8);
+        }
+        .roadmap-descr {
+            position: relative;
+            padding-left: 20px;
+
+            box-shadow: 0 20px 40px rgba($text_color, .1);
+            border-radius: 8px;
+            padding: 30px 20px;
+            display: inline-table;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.activity-block {
+    font-size: $main-font-size;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 30px;
+
+    .activity-title {
+        flex-basis: 100%;
+        font-size: $base-font-size;
+        font-weight: 600;
+    }
+
+    .activity-graph {
+        margin-right: 30px;
+    }
+
+    .activity-items {
+        flex: 1;
+        .activity-items-row {
+            margin-bottom: 10px;
+            display: flex;
+
+            & > div:nth-child(1) {
+                flex-basis: 100px;
+            }
+            & > div:nth-child(2) {
+                flex-basis: 30%;
+            }
+            & > div:nth-child(3) {
+                flex-basis: 30%;
+                text-transform: uppercase;
+            }
+
+            .activity-small-text {
+                display: block;
+                font-size: $medium-font-size;
+            }
+
+            .status-very-low {
+                color: $red_color;
+            }
+            .status-low {
+                color: $orange_color;
+            }
+            .status-medium {
+                color: $yellow_color;
+            }
+            .status-high {
+                color: $green_color;
+            }
+
+        }
+    }
+}
+
+.team-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    & > li {
+        margin-right: 30px;
+        text-align: center;
+        padding: 20px 50px;
+
+        img {
+            display: block;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            margin: 0 auto;
+        }
+
+        .member-title {
+            color: $dark;
+            display: inline-block;
+            padding: 5px 5px 0 0;
+            font-weight: 700;
+            a {
+                color: inherit;
+            }
+        }
+        .member-links {
+            display: inline-block;
+            color: $green_color;
+            font-size: $header1-font-size;
+            a {
+                color: inherit;
+            }
+        }
+        .member-position {
+            font-size: $medium-font-size;
+        }
+
+        .verified-line {
+            margin-top: 10px;
+            &.verified {
+                background: #fff;
+                font-size: $main-font-size;
+                box-shadow: 0 4px 4px rgba($dark, .07);
+                padding: 5px;
+                border-radius: 11px;
+                font-style: normal;
+                font-weight: 300;
+                color: $green_color;
+            }
+
+            &.unverified {
+                display: inline-block;
+                text-align: center;
+                background: $red_color;
+                box-shadow: 0 4px 4px rgba($red_color, .3);
+                border-radius: 11px;
+                font-weight: 300;
+                line-height: normal;
+                color: $light;
+                font-size: $main-font-size;
+                padding: 5px 10px;
+                min-width: 95px;
+                cursor: pointer;
+                position: relative;
+                transition: all .2s ease-in;
+
+                &:hover {
+                    text-decoration: none;
+                    background: $dark;
+                }
+            }
+        }
+
+    }
+}
+
+.comments-section {
+    .comment-login {
+        text-align: center;
+    }
+    .comment-container {
+        .comment-metas {
+            color: $green_color;
+            font-size:$medium-font-size;
+            span {
+                margin-right: 5px;
+                font-size: $header1-font-size;
+                color: $secondary_color;
+            }
+        }
+        .comment-body {
+            margin: 10px 0;
+        }
+        .comment-reply {
+            text-align: right;
+        }
+    }
+
+}
