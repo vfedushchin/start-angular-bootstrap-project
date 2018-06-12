@@ -8,6 +8,7 @@
         <ul class="tokens-list">
             <li *ngFor="let token of tokenService.tokensList;">
                 <img src="{{token.icon}}" alt=""/>
+                <a [routerLink]="[ '/token/detail', { id: token.id }]">Token Name: {{token.name}}</a>
                 {{token.blockchain}}
                 <br>
                 <p>contractAddress: </p>
@@ -19,7 +20,6 @@
                 <!--{{token.icon}}-->
                 {{token.id}}
                 {{token.ownerId}}
-                {{token.name}}
                 {{token.price}}
                 {{token.symbol}}
             </li>

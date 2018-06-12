@@ -9,7 +9,7 @@ import {RetrieveTokenDetails} from '../../models/tokens/retrieveTokenDetails';
 export class TokensService {
   public requestInProgress: boolean;
   public tokensList: RetrieveTokenList[] = [];
-  public tokensDetails: RetrieveTokenDetails = new RetrieveTokenDetails();
+  public tokensDetails: RetrieveTokenDetails;
 
   constructor(private dataAccess: DataAccessService) {
   }
@@ -30,6 +30,7 @@ export class TokensService {
 
 
   getTokenDetails(id: string) {
+    this.tokensDetails = new RetrieveTokenDetails();
     this.requestInProgress = true;
     /*TODO when response structure will be similar to other - change to getApiRequest*/
     this.dataAccess.getApiRequest2(environment.rest_endpoint.retrieveTokensDetails + "/" + id)
