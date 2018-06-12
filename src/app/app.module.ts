@@ -17,17 +17,22 @@ import { TokenCreateComponent } from './pages/token-create/token-create.componen
 import {AuthService} from './providers/auth/auth.service';
 import { HeaderMainComponent } from './components/header-main/header-main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TokenListComponent } from './pages/token-list/token-list.component';
+import {TokensService} from './providers/tokens/tokens.service';
+
+
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'token-create', component: TokenCreateComponent},
+  {path: 'token-list', component: TokenListComponent},
   { path: '**', redirectTo: '' }
 ];
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TokenCreateComponent, HeaderMainComponent, FooterComponent],
+  declarations: [AppComponent, LoginComponent, TokenCreateComponent, HeaderMainComponent, FooterComponent, TokenListComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -46,6 +51,7 @@ const appRoutes: Routes = [
     AuthService,
     DataShareService,
     DataAccessService,
+    TokensService,
   ],
   bootstrap: [AppComponent]
 })

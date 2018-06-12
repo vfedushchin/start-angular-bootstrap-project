@@ -13,5 +13,6 @@ export const environment = {
     logout: END_POINT + '/v1/accessuser/logout',
     //Tokens
     createToken: END_POINT + '/api/ico/token',
+    retrieveTokensList: END_POINT + '/api/ico/tokens',
   }
 };
