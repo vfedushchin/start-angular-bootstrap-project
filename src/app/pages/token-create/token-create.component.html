@@ -102,7 +102,7 @@
 
 
         <!--<a  href="dashboard.html"  class="btn btn-primary">Create Token</a>-->
-        <button type="submit" class="btn btn-primary">Create Token</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!createTokenForm.valid">Create Token</button>
     </form>
 
 </div>
