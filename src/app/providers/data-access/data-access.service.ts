@@ -23,7 +23,7 @@ export class DataAccessService {
 
     return this.http.post(endpoint, request, this.getRequestOptions())
       .map((res) => this.extractData(res))
-      /*.catch(this.handleError);*/
+      .catch(this.handleError);
   }
 
   public uploadFile(fileToUpload: File, endpoint: string, type: string): Observable<any> {
@@ -104,13 +104,14 @@ export class DataAccessService {
       errMsg = error.error.message;
     } else if (error.error instanceof Error) {
       // Server error must be checked manually
-      throw Observable.throw(error.error);
+      throw Observable.throw(error.error.error);
     } else {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
       console.error(
+        error,
         `Backend returned code ${error.status}, ` +
-        `body was: ${error.error}`);
+        `body was: ${ error.error.error}`);
       throw Observable.throw('Connection error');
     }
     return error.error;
