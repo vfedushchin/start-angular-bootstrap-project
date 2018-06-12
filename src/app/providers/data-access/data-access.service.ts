@@ -23,7 +23,7 @@ export class DataAccessService {
 
     return this.http.post(endpoint, request, this.getRequestOptions())
       .map((res) => this.extractData(res))
-      .catch(this.handleError);
+      /*.catch(this.handleError);*/
   }
 
   public uploadFile(fileToUpload: File, endpoint: string, type: string): Observable<any> {
@@ -60,7 +60,8 @@ export class DataAccessService {
     }
     const accessToken = this.dataShare.getAccessToken();
     if (!DataShareService.isNullOrEmpty(accessToken)) {
-      httpHeader = httpHeader.append('Authorization', accessToken.toString());
+      //httpHeader = httpHeader.append('Authorization', accessToken.toString());
+      httpHeader = httpHeader.append('jwt', accessToken.toString());
     }
 
     const dateIs = new Date().toString();

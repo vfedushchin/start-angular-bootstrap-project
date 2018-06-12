@@ -50,12 +50,32 @@
 <div class="container">
 
     <h2>Input data to create token</h2>
+
+
+    <div class="notification error" *ngIf="statusMessageError">{{statusMessageError}}</div>
+    <div class="notification success" *ngIf="statusMessageSuccess">{{statusMessageSuccess}}</div>
+
     
-    <form [formGroup]="createToken" (submit)="sendCreateTokenReq()">
+    <form [formGroup]="createTokenForm" #f="ngForm" (submit)="sendCreateTokenReq()">
         <div class="form-group">
             <label >Token Name</label>
             <input type="text" class="form-control" placeholder="Token Name" formControlName="name">
         </div>
+
+        <div class="form-group">
+            <label >Blockchain</label>
+           <!-- <select  formControlName="blockchain"  [(ngModel)]="selectedBlockchain">
+                <option [value]="Yocoin" [selected]="true">Yocoin</option>
+                <option [value]="Ethereum">Ethereum</option>
+            </select>-->
+
+            <select formControlName="blockchain"  [(ngModel)]="blockchainModel">
+                <option *ngFor="let blockchain of blockchainList" [value]="blockchain.value">
+                    {{blockchain.value}}
+                </option>
+            </select>
+        </div>
+
         <div class="form-group">
             <label >Token Symbol</label>
             <input type="text" class="form-control" placeholder="Token Symbol" formControlName="symbol">
@@ -80,8 +100,9 @@
         </div>
 
 
-        <a  href="dashboard.html"  class="btn btn-primary">Create Token</a>
-        <!--<button type="submit" class="btn btn-primary">Sign in</button>-->
+
+        <!--<a  href="dashboard.html"  class="btn btn-primary">Create Token</a>-->
+        <button type="submit" class="btn btn-primary">Create Token</button>
     </form>
 
 </div>

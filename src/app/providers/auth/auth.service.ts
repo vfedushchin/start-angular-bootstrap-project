@@ -24,7 +24,7 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       this.dataAccess.postApiRequest(environment.rest_endpoint.login, login)
         .subscribe((resp: AccessUserDataResponse) => {
-          this.dataShare.setAccessToken(resp.data.token, isRemember);
+          this.dataShare.setAccessToken(resp.data.token.token, isRemember);
           return resolve(resp.data);
         }, error => {
           return reject(error.error ? error.error.message : '');

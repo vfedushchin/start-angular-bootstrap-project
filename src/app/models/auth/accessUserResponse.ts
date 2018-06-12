@@ -5,6 +5,8 @@ export class AccessUserDataResponse extends Result{
 }
 
 export class AccessUserData {
-  token: string;
+  token: {
+    token: string;
+  };
   two_fa_required: boolean;
 }
