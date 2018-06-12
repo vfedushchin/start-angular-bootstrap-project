@@ -96,7 +96,7 @@
 
         <div class="form-group">
             <a (click)="file.click()">Update</a>
-            <input type="file" accept="image/*" #file (change)="onAvatarChange($event)">
+            <input type="file" accept="image/*" #file (change)="handleFileSelect($event)"  formControlName="icon">
         </div>
 
 
