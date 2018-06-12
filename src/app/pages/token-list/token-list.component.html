@@ -1,27 +1,28 @@
+<main class="main">
+    <div class="container bg-white create-token">
+        <h2>
+            token-list works!
+        </h2>
 
-<div class="container">
-    <h2>
-        token-list works!
-    </h2>
 
-
-    <ul class="tokens-list">
-        <li *ngFor="let token of tokenService.tokensList;">
-            <img src="{{token.icon}}" alt=""/>
-            {{token.blockchain}}
-            <br>
-            <p>contractAddress: </p>
-            {{token.contractAddress}}
-            <br>
-            {{token.contractHash}}
-            {{token.decimals}}
-            {{token.description}}
-            <!--{{token.icon}}-->
-            {{token.id}}
-            {{token.ownerId}}
-            {{token.name}}
-            {{token.price}}
-            {{token.symbol}}
-        </li>
-    </ul>
-</div>
+        <ul class="tokens-list">
+            <li *ngFor="let token of tokenService.tokensList;">
+                <img src="{{token.icon}}" alt=""/>
+                {{token.blockchain}}
+                <br>
+                <p>contractAddress: </p>
+                {{token.contractAddress}}
+                <br>
+                {{token.contractHash}}
+                {{token.decimals}}
+                {{token.description}}
+                <!--{{token.icon}}-->
+                {{token.id}}
+                {{token.ownerId}}
+                {{token.name}}
+                {{token.price}}
+                {{token.symbol}}
+            </li>
+        </ul>
+    </div>
+</main>

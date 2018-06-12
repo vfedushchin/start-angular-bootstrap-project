@@ -42,3 +42,26 @@
 @import "./ico";
 
 //@import "./flaticon";
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: $text_color;
+    background-color: $site_bg;
+}
+
+.mb-section {
+    margin-bottom: 30px;
+}
+
+.affiliate {
+    padding-left: 30px;
+    padding-right: 30px;
+}

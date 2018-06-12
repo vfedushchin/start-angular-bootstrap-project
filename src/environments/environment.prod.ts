@@ -10,5 +10,6 @@ export const environment = {
     //Tokens
     createToken: END_POINT + '/api/ico/token',
     retrieveTokensList: END_POINT + '/api/ico/tokens',
+    retrieveTokensDetails: END_POINT + '/api/ico/token/details/',
   }
 };

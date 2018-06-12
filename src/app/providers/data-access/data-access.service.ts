@@ -19,6 +19,14 @@ export class DataAccessService {
       .catch(this.handleError);
   }
 
+
+  public getApiRequest2(endpoint: string): Observable<any> {
+
+    return this.http.get(endpoint, this.getRequestOptions())
+      /*.map((res) => this.extractData(res))
+      .catch(this.handleError);*/
+  }
+
   public postApiRequest(endpoint: string, request: any): Observable<any> {
 
     return this.http.post(endpoint, request, this.getRequestOptions())

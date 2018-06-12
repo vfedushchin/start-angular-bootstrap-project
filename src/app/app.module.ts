@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TokenListComponent } from './pages/token-list/token-list.component';
 import {TokensService} from './providers/tokens/tokens.service';
 import { HomeMainComponent } from './pages/home-main/home-main.component';
+import { TokenDetailsComponent } from './pages/token-details/token-details.component';
 
 
 
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
       {path: '', redirectTo: 'token-list', pathMatch: 'full'},
       {path: 'token-create', component: TokenCreateComponent},
       {path: 'token-list', component: TokenListComponent},
+      {path: 'token/:id', component: TokenDetailsComponent},
     ]
   },
 
@@ -43,7 +45,7 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TokenCreateComponent, HeaderMainComponent, FooterComponent, TokenListComponent, HomeMainComponent],
+  declarations: [AppComponent, LoginComponent, TokenCreateComponent, HeaderMainComponent, FooterComponent, TokenListComponent, HomeMainComponent, TokenDetailsComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
